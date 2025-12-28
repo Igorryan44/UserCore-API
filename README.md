@@ -8,7 +8,8 @@
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas para as seguintes tarefas:
 
 - [x] Setup e Fundação Técnica
-- [ ] Modelagem de Domínio
+- [x] Crição da Entidade Usuário e Endpoint de Cadastro
+- [x] Repositório e Integração com Banco de Dados
 - [ ] DTOs e Validação
 - [ ] Camada de Serviço
 - [ ] Camada de Controller (REST)
