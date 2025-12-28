@@ -34,10 +34,11 @@ public class UsuarioService {
     }
 
     public  Usuario updateUsuario(Usuario usuario, Long id) {
-        if (usuarioRepository.findById(id).isPresent()) {
-            return usuarioRepository.save(usuario);
-        } else {
-            throw new RuntimeException("Usuario com o id" + id + "não encontrado para atualização.");
-        }
+            Usuario updateUser = usuarioRepository.findById(id).
+                    orElseThrow(() -> new RuntimeException("Usuario com o id" + id + "não encontrado para atualização."));
+            updateUser.setUsername(usuario.getUsername());
+            updateUser.setEmail(usuario.getEmail());
+            updateUser.setPassword(usuario.getPassword());
+            return usuarioRepository.save(updateUser);
     }
 }
