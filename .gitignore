@@ -32,8 +32,9 @@ build/
 # VS Code
 .vscode/
 
-# Properties File (Model in README.md)
+# Properties File (Model in README.md) and Test
 src/main/resources/application.properties
+*/test
 
 # Compiled class file
 *.class
