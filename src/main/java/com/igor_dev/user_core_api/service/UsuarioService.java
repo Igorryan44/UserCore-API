@@ -20,7 +20,7 @@ public class UsuarioService {
         return usuarioRepository.findAll();
     }
 
-    public Optional<Usuario> findById(Long id) {
+    public Optional<Usuario> findUserById(Long id) {
         return usuarioRepository.findById(id);
     }
 
@@ -33,12 +33,14 @@ public class UsuarioService {
         System.out.println("Usuario removido com sucesso!");
     }
 
-    public  Usuario updateUsuario(Usuario usuario, Long id) {
-            Usuario updateUser = usuarioRepository.findById(id).
-                    orElseThrow(() -> new RuntimeException("Usuario com o id" + id + "não encontrado para atualização."));
-            updateUser.setUsername(usuario.getUsername());
-            updateUser.setEmail(usuario.getEmail());
-            updateUser.setPassword(usuario.getPassword());
-            return usuarioRepository.save(updateUser);
+    public  Usuario updateUsuario(Long id, Usuario usuario) {
+            Usuario usuarioEntity = findUserById(id).orElseThrow(() -> new RuntimeException("Usuario nao encontrado"));
+            Usuario usuarioUpdated = Usuario.builder()
+                    .id(id)
+                    .username(usuario.getUsername() != null ? usuario.getUsername() : usuarioEntity.getUsername())
+                    .email(usuario.getEmail() != null ? usuario.getEmail() : usuarioEntity.getEmail())
+                    .password(usuario.getPassword() != null ? usuario.getPassword() : usuarioEntity.getPassword())
+                    .build();
+            return usuarioRepository.save(usuarioUpdated);
     }
 }

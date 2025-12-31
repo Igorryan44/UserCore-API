@@ -23,7 +23,7 @@ public class UsuarioController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Usuario> getUsuarioById(@PathVariable Long id) {
-        return usuarioService.findById(id)
+        return usuarioService.findUserById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
@@ -41,7 +41,6 @@ public class UsuarioController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Usuario> updateUsuario(@PathVariable Long id, @RequestBody Usuario usuario) {
-        Usuario updatedUsuario = usuarioService.updateUsuario(usuario, id);
-        return ResponseEntity.ok(updatedUsuario);
+        return ResponseEntity.ok(usuarioService.updateUsuario(id, usuario));
     }
 }

@@ -60,7 +60,7 @@ Alternativamente você pode rodar o projeto na sua IDE favorita (IntelliJ, Eclip
   <tr>
     <td align="center">
       <a href="https://linkedin.com/in/igorryan" title="link do linkedin de Igor Alves">
-        <img src="https://media.licdn.com/dms/image/v2/D4D03AQGopZX3ceB7cg/profile-displayphoto-scale_200_200/B4DZkU851wHYAY-/0/1756993135190?e=1768435200&v=beta&t=twvn58Ye5ksQ7e7VPO6Aa7gQm4aSN_lCYkI0ZsLmCd0" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQGopZX3ceB7cg/profile-displayphoto-scale_200_200/B4DZkU851wHYAY-/0/1756993135190?e=1768435200&v=beta&t=twvn58Ye5ksQ7e7VPO6Aa7gQm4aSN_lCYkI0ZsLmCd0" width="100px;" alt="Foto do Igor Alves"/><br>
         <sub>
           <b>Igor Alves</b>
         </sub>
